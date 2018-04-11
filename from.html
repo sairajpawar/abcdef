@@ -1,0 +1,106 @@
+<html>
+<script type="text/javascript" >  
+function validateform(thisform){  
+		 if(myForm.department.selectedIndex==0){
+		thisform.department.focus();
+        return false;
+	     }
+		  if(myForm.year.selectedIndex==0){
+		thisform.year.focus();
+        return false;
+	     }
+	   
+return true;
+}
+</script>  
+<style>
+input[type=text], select {
+    width: 20%;
+    padding: 12px 20px;
+    margin:5px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=Password], select {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 20%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px 10px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	margin-bottom:10px;
+	margin-left:50px;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+div {
+    border-radius: 5px;
+    background-color: #33AB50;
+    padding: 30px;
+}
+form{
+ border: solid;
+ background-color: #EBB4FA;
+}
+body{
+   background-color: #33C050;
+}
+</style>
+<body>
+<div>
+ <center> <form action="signup.php" method="post" name="myForm" onsubmit="return validateform(this)" style="width:70%">
+<center><h2>SIGNUP FORM</h2></center>
+
+    <label for="fname"><b>First Name:-</b></label>
+    <input type="text" id="fname" name="Firstname" placeholder="Your name.." required>
+<br>
+<br>
+
+    <label for="lname"><b>Last Name:- </b></label>
+    <input type="text" id="lname" name="Lastname" placeholder="Your last name.."  required>
+<br>
+<br>
+<label><b>Email:- </b></label>
+    <input type="text" placeholder="Enter Email"  id="email" name="Email" required>
+<br>
+<br>
+<label for="pass"><b>Password:</b></label>
+    <input type="password" id="pass" name="Password" placeholder="Create password.." required>
+    </select>
+<br>
+<br>
+<label for="pass"><b>Confirm Password:</b></label>
+    <input type="password" id="pass" name="Password" placeholder="Confirm password.." required>
+    </select>
+<br>
+<br>
+ <label for="Preference"><b>Your Interest :</b></label>
+    <select id="Preference" name="Preference" required>
+      <option>Bollywood</option>
+      <option>Hollywood </option>
+      <option>Tollywood</option>
+ <option>Comedy</option>
+ <option>Drama</option>
+    </select>
+  <br>
+<br>
+    <input type="submit" value="Submit">
+  </form></center>
+</div>
+</body>
+</html>
